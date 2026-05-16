@@ -1,0 +1,99 @@
+label {
+    color: var(--color-foreground);
+}
+
+.input {
+    border-radius: var(--radius-md);
+    height: calc(var(--spacing) * 10);
+    width: 100%;
+    border-width: 1px;
+    border-color: var(--color-border);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    background-color: var(--color-card);
+    color: var(--color-foreground);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.input::placeholder {
+    color: var(--color-muted-foreground);
+}
+
+.input:focus-visible {
+    outline: 0;
+    box-shadow:
+        0 0 0 calc(var(--spacing) * .5) var(--color-background)
+        0 0 0 calc(var(--spacing) * 1) var(--color-primary);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .input {
+        font-size: var(--text-sm);
+    }
+}
+
+.textarea {
+    border-radius: var(--radius-md);
+    height: calc(var(--spacing) * 40);
+    width: 100%;
+    border-width: 1px;
+    border-color: var(--color-border);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    background-color: var(--color-card);
+    color: var(--color-foreground);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.textarea::placeholder {
+    color: var(--color-muted-foreground);
+}
+
+.textarea:focus-visible {
+    outline: 0;
+    box-shadow:
+        0 0 0 calc(var(--spacing) * .5) var(--color-background)
+        0 0 0 calc(var(--spacing) * 1) var(--color-primary);
+}
+
+.label {
+    display: block;
+    font-size: var(--text-sm);
+}
+
+input[type=file] {
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--color-foreground);
+}
+
+input[type=file]::file-selector-button {
+    margin-right: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+    border-radius: calc(var(--spacing) * 2);
+    border-width: 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+}
+
+input[type=file]::file-selector-button:hover {
+    opacity: 0.9;
+}
+
+.error {
+    font-size: var(--text-sm);
+    color: var(--color-red-600);
+}
+
+.form-muted-icon {
+    color: var(--color-muted-foreground);
+}
+
+.form-muted-icon:hover {
+    color: var(--color-foreground);
+}
