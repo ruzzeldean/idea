@@ -14,6 +14,7 @@
         "laravel/tinker": "^3.0"
     },
     "require-dev": {
+        "driftingly/rector-laravel": "^2.3",
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.2.5",
         "laravel/pao": "^1.0.6",
@@ -21,7 +22,8 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "pestphp/pest": "^4.7",
-        "pestphp/pest-plugin-laravel": "^4.1"
+        "pestphp/pest-plugin-laravel": "^4.1",
+        "rector/rector": "^2.4"
     },
     "autoload": {
         "psr-4": {
@@ -43,6 +45,10 @@
             "@php artisan migrate --force",
             "npm install --ignore-scripts",
             "npm run build"
+        ],
+        "format": [
+            "vendor/bin/rector",
+            "vendor/bin/pint"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
