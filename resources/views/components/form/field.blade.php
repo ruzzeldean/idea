@@ -1,4 +1,4 @@
-@props(['label' => false, 'name', 'type' => 'text'])
+@props(['label' => false, 'name', 'type' => 'text', 'value' => ''])
 
 <div class="space-y-2">
   @if ($label)
@@ -6,10 +6,10 @@
   @endif
 
   @if ($type === 'textarea')
-    <textarea name="{{ $name }}" id="{{ $name }}" class="textarea" {{ $attributes }}>{{ old($name) }}</textarea>
+    <textarea name="{{ $name }}" id="{{ $name }}" class="textarea" {{ $attributes }}>{{ old($name, $value) }}</textarea>
   @else
     <input type="{{ $type }}" class="input" name="{{ $name }}" id="{{ $name }}"
-      value="{{ old($name) }}" {{ $attributes }}>
+      value="{{ old($name, $value) }}" {{ $attributes }}>
   @endif
 
   <x-form.error name="{{ $name }}" />
